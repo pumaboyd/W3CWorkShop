@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<method xmlns="http://seventytwo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://seventytwo.com seventytwo.xsd"
+	interfaceName="com.dianping.open.service.APIBaseDataService"
+	interfaceVersion="1.0.0">
+	<methodCall name="findCities" apiName="getcitylist">
+		<params>
+			<param type="string" apiName="isallcity" />
+		</params>
+	</methodCall>
+	<methodResponse>
+		<param apiName="ArrayOfCity ">
+			<type>
+				<array apiArrayItemName="City">
+					<type>
+						<struct>
+							<member name="cityAreaCode" apiName="CityAreaCode" apiType="string" />
+							<member name="cityID" apiName="CityID" apiType="int" />
+							<member name="cityName" apiName="CityName" apiType="string" />
+							<member name="firstChar" apiName="FirstChar" apiType="string" />
+							<member name="isHot" apiName="IsHot" apiType="boolean" />
+							<member name="isPromo" apiName="IsPromo" apiType="boolean" />
+							<member name="lat" apiName="Lat" apiType="string" />
+							<member name="lng" apiName="Lng" apiType="string" />
+							<member name="region" apiName="Region" apiType="string" />
+							<member name="topCity" apiName="TopCity" apiType="boolean" />
+						</struct>
+					</type>
+				</array>
+			</type>
+		</param>
+	</methodResponse>
+</method>
